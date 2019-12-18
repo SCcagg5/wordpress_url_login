@@ -33,7 +33,7 @@ function verify_jwt($jwt, $secret){
 }
 
 //$secret = "1q2W3e4R";
-//$jwt = get_jwt("user_email", $secret, 1000);
+//$jwt = get_jwt("username", $secret, 1000);
 //echo $jwt;
 //$res = verify_jwt($jwt, $secret);
 //echo $res;
