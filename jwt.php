@@ -32,8 +32,8 @@ function verify_jwt($jwt, $secret){
 	return $payload["user"];
 }
 
-$secret = "1q2W3e4R";
-$jwt = get_jwt("_hublet@orange.fr", $secret, 1000);
-echo $jwt;
+//$secret = "1q2W3e4R";
+//$jwt = get_jwt("user_email", $secret, 1000);
+//echo $jwt;
 //$res = verify_jwt($jwt, $secret);
 //echo $res;
