@@ -2,7 +2,7 @@
 
 function get_jwt($email, $secret, $time = 1) {
 	$time = time() + ($time);
-	$header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+	$header = json_encode(['alg' => 'HS256']);
 	$payload = json_encode(['user' => $email, 'time' => $time]);
 	$base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
 	$base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
