@@ -13,7 +13,7 @@ function get_jwt($email, $secret, $time = 1) {
 }
 
 function verify_jwt($jwt, $secret){
-	$header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+	$header = json_encode(['alg' => 'HS256']);
 	$base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
 
 	$res = explode('.', $jwt);
@@ -34,6 +34,8 @@ function verify_jwt($jwt, $secret){
 
 //$secret = "1q2W3e4R";
 //$jwt = get_jwt("username", $secret, 1000);
+//echo $jwt. "\n";
+//$jwt = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjogInVzZXJuYW1lIiwidGltZSI6IDE1NzY3ODA4NzN9.r2PdHLSPEBw0n1k11ZgYkuyfv5Pg0wPpfWU0zh9z5fY";
 //echo $jwt;
 //$res = verify_jwt($jwt, $secret);
-//echo $res;
+//var_dump($res);

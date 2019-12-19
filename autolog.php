@@ -3,7 +3,7 @@
 $secret = "1q2W3e4R";
 
 function verify_jwt($jwt, $secret){
-        $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+        $header = json_encode(['alg' => 'HS256']);
         $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
 
         $res = explode('.', $jwt);
